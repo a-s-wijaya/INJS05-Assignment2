@@ -1,4 +1,4 @@
-const { verify } = require("../helpers/jwt");
+const { verifyToken } = require("../helpers/jwt");
 const users = require("../data/users.json");
 
 function verifyUser(username, password, users) {
@@ -14,7 +14,7 @@ function authenticateToken(req, res, next) {
   if (token == null) {
     return res.sendStatus(401);
   }
-  verify(token, (err, user) => {
+  verifyToken(token, (err, user) => {
     if (err) {
       return res.sendStatus(403);
     }
