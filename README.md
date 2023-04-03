@@ -12,6 +12,6 @@ npm install
 npm run app
 ```
 ### How to use
-1. Use [POSTMAN](https://www.postman.com/) and use POST method to localhost:3000/login with username and password from [here](./data/users.json)
+1. Use [POSTMAN](https://www.postman.com/) and use POST method to ***localhost:3000/login*** with username and password from [here](./data/users.json)
 2. Copy ```token``` from response
-3. Use GET method to localhost:3000/teachers and set Headers Authentication with Bearer ```token```
+3. Use GET method to ***localhost:3000/teachers*** and set Headers with Authorization as Key and Bearer ```token``` as Value
